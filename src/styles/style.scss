@@ -1,0 +1,7 @@
+@use './core' as core;
+@use './variables' as variables;
+@use './card' as card;
+@use './input' as input;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

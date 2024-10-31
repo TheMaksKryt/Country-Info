@@ -1,0 +1,8 @@
+.card {
+  background: var(--surface-card);
+  padding: 1rem;
+  border-radius: var(--content-border-radius);
+  @media (max-width: 500px) {
+    padding: 0.25rem;
+  }
+}
