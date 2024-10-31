@@ -24,9 +24,9 @@ const handleInput = (event: Event) => {
       focus:ring-indigo-600 
       sm:text-sm/6"
         type="text"
-        :value="modelValue"
+        :value="props.modelValue"
         @input="handleInput"
-        :placeholder="placeholder"
+        :placeholder="props.placeholder"
       />
   </template>
   
