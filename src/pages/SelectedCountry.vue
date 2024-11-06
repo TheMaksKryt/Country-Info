@@ -1,20 +1,19 @@
 <script setup lang="ts">
-import { ref, computed, onBeforeMount } from 'vue';
+import { ref, onBeforeMount } from 'vue';
 import { useCountriesStore } from '../store/store';
-import type { HolidayCountry } from '../types';
 import Years from '../components/YearsButton/Years.vue';
 import AppButton from '../components/AppButton.vue';
 import Holidays from '../components/Holidays/Holidays.vue';
 const store = useCountriesStore();
-const holidays = computed<HolidayCountry[]>(() => store.holidays);
 const year = ref<number>(2024);
 const code = ref<string>('');
 function getCodeByURL(newYear?: number): void {
+    console.log('newYear', newYear);
+    console.log('year.value', year.value);
     if (newYear === year.value) return;
     if (newYear) year.value = newYear;
     const url: string = window.location.href;
     code.value = url.split('/').pop() || '';
-    if (holidays.value[0]?.countryCode === code.value) return
     if (code.value) {
         store.getCountry(year.value, code.value);
     } else {

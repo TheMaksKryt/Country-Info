@@ -11,3 +11,21 @@ Install the necessary dependencies:
 ```sh
 npm install
 ```
+
+Start the project in developer mode
+
+```sh
+npm run dev
+```
+
+Build a "build" version of the project
+
+```sh
+npm run build
+```
+
+Result preview
+
+```sh
+npm run preview
+```
